@@ -9,7 +9,7 @@ describe("Dao", function () {
     const Dao = await ethers.deployContract("Dao");
     console.log("Dao address:", await Dao.getAddress());
 
-    const DaoBalance = await Dao.getBalance();
+    const DaoBalance = await Dao.daoBalance();
     console.log("Dao balance:", DaoBalance.toString());
 
 
