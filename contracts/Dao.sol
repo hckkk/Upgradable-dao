@@ -6,16 +6,16 @@ pragma solidity ^0.8.10;
     mapping(address => uint256) public balances;
 
     function deposit() public payable {
-        require(msg.value >= 1 ether, "Deposits must be no less than 1 Ether");
+        // require(msg.value >= 1 ether, "Deposits must be no less than 1 Ether");
         balances[msg.sender] += msg.value;
     }
 
     function withdraw() public {
         // Check user's balance
-        require(
-            balances[msg.sender] >= 1 ether,
-            "Insufficient funds.  Cannot withdraw"
-        );
+        // require(
+        //     balances[msg.sender] >= 1 ether,
+        //     "Insufficient funds.  Cannot withdraw"
+        // );
         uint256 bal = balances[msg.sender];
 
         // Withdraw user's balance
