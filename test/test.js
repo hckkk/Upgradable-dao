@@ -36,4 +36,12 @@ describe("Dao", function () {
     console.log("Dao balance:", daoBalance.toString());
   });
 
+  it("Attack", async function () {
+    // const txn2 = await dao.withdraw();
+    // await txn2.wait(1);
+    // const daoBalance = await dao.daoBalance();
+    // expect(daoBalance.toString()).to.equal("0");
+    // console.log("Dao balance:", daoBalance.toString());
+  });
+
 });
