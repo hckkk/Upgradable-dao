@@ -1,11 +1,11 @@
 async function main() {
-    const [deployer] = await ethers.getSigners();
+    // const [deployer] = await ethers.getSigners();
+    // console.log("Deploying contracts with the account:", deployer.address);
   
-    console.log("Deploying contracts with the account:", deployer.address);
+    const Dao = await ethers.getContractFactory("Dao");
+    const dao = await Dao.deploy();   
   
-    const Dao = await ethers.deployContract("Dao");
-  
-    console.log("Dao address:", await Dao.getAddress());
+    console.log("DAO address:", await dao.getAddress());
   }
   
   main()

@@ -1,7 +1,7 @@
 {
   "name": "dao",
   "version": "1.0.0",
-  "description": "",
+  "description": "```\r # install\r npm install\r # test\r npx hardhat test --network hardhat # on local hardhat net\r npx hardhat test # on remote sepolia test net\r ```",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,11 +9,24 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.4",
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",
-    "hardhat": "^2.18.2"
+    "ethers": "^6.8.0",
+    "hardhat": "^2.18.3"
   },
   "dependencies": {
-    "dotenv": "^16.3.1",
-    "ethers": "^6.8.0"
-  }
+    "dotenv": "^16.3.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hckkk/dao.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/hckkk/dao/issues"
+  },
+  "homepage": "https://github.com/hckkk/dao#readme"
 }
