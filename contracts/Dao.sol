@@ -27,7 +27,7 @@ pragma solidity ^0.8.10;
     }
 
     function daoBalance() public view returns (uint256) {
-        // return address(this).balance;
-        return balances[msg.sender];
+        return address(this).balance;
+        // return balances[msg.sender];
     }
 }
