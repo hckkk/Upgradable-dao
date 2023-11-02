@@ -1,6 +1,6 @@
 async function main() {
-    // const [deployer] = await ethers.getSigners();
-    // console.log("Deploying contracts with the account:", deployer.address);
+    const [deployer] = await ethers.getSigners();
+    console.log("Deploying contracts with the account:", deployer.address);
   
     const Dao = await ethers.getContractFactory("Dao");
     const dao = await Dao.deploy();   
