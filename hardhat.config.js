@@ -12,7 +12,7 @@ module.exports = {
     hardhat: {},
     sepolia: {
       url: usr_API_URL,
-      accounts: [`0x${usr_PRIVATE_KEY}`],
+      accounts: [`0x${usr_PRIVATE_KEY}`, `0x${attack_PRIVATE_KEY}`],
     },
     attack: {
       url: attack_API_URL,

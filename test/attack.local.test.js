@@ -2,27 +2,25 @@ const { ethers } = require("hardhat");
 const { expect } = require("chai");
 
 describe("Dao", function () {
-  const AMOUNT = ethers.parseEther("0.01"); //bignumber
+  const AMOUNT = ethers.parseEther("0.1"); //bignumber
   let dao, daoAddress, attack, attackAddress;
   let owner, attacker;
   let daoBalance;
-  this.timeout(80000);
+
   beforeEach(async function () {
     [owner, attacker] = await ethers.getSigners();
 
-    dao = await ethers.getContractAt(
-      "Dao", 
-      "0xF36056C1CE7E70E2cF32926d5721E3eB1CB088bC", 
-      owner
-    );
+    const Dao = await ethers.getContractFactory("Dao");
+    console.log("Deploying contracts with the account:", owner.address);
+    dao = await Dao.connect(owner).deploy();
+
     daoAddress = await dao.getAddress();
     console.log("Dao address:", daoAddress);
 
-    attack = await ethers.getContractAt(
-      "Attack", 
-      "0x1002664B48E4Db795B54C0165493697e755dc161", 
-      attacker
-    );
+    const Attack = await ethers.getContractFactory("Attack");
+    console.log("Deploying contracts with the account:", attacker.address);
+    attack = await Attack.connect(attacker).deploy(daoAddress);
+    
     attackAddress = await attack.getAddress();
     console.log("Attack address:", attackAddress);
   });

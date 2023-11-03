@@ -15,3 +15,9 @@ npx hardhat test # on remote sepolia test net
 ## Attack
 npx hardhat run scripts/attack.js --network attack
 ```
+
+The following is how to run the updated attack test script.
+Note that the attack is written in the form of a hardhat test and only tested under local node, so you need to adapt it to the test net version. A few changes are made over the `Attack.sol` and `Dao.sol`.
+```
+npx hardhat test test/attack.local.test.js --network hardhat
+```

