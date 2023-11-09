@@ -7,7 +7,6 @@ async function main () {
   await dao.waitForDeployment();
   console.log('dao deployed to:',await dao.getAddress());
 
-
 }
 
 main()
