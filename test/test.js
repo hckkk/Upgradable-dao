@@ -9,7 +9,7 @@ describe("Dao", function () {
     const [owner] = await ethers.getSigners();
     dao = await ethers.getContractAt(
       "Dao", 
-      "0xdD039Ebb9D52A21b2844Fdf22fC5D4C7186762DB", 
+      "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0", 
       owner
     );
   });

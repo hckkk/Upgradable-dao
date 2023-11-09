@@ -21,3 +21,14 @@ Note that the attack is written in the form of a hardhat test and only tested un
 ```
 npx hardhat test test/attack.local.test.js --network hardhat
 ```
+
+## run Upgrade test
+```npx hardhat run scripts/deploy_upgradeable_dao.js --network sepolia```
+
+Change dao address in deployAttack.js and test scripts
+
+```npx hardhat run scripts/deployAttack.js --network sepolia```
+
+Change attack address in deployAttack.js and test scripts
+
+```npx hardhat test test/upgrade.test.js --network sepolia```

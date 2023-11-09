@@ -6,13 +6,13 @@ describe("Dao", function () {
   let dao, daoAddress, attack, attackAddress;
   let owner, attacker;
   let daoBalance;
-  this.timeout(80000);
+  this.timeout(90000);
   beforeEach(async function () {
     [owner, attacker] = await ethers.getSigners();
 
     dao = await ethers.getContractAt(
       "Dao", 
-      "0xF36056C1CE7E70E2cF32926d5721E3eB1CB088bC", 
+      "0xe394c056DF868d5a7f807434c8701c7e75Eb818C", 
       owner
     );
     daoAddress = await dao.getAddress();
@@ -20,7 +20,7 @@ describe("Dao", function () {
 
     attack = await ethers.getContractAt(
       "Attack", 
-      "0x1002664B48E4Db795B54C0165493697e755dc161", 
+      "0x8B4a8dE23d8C8214EB9B007cAfbBeb6EFbDf60C8", 
       attacker
     );
     attackAddress = await attack.getAddress();

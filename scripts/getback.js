@@ -3,14 +3,13 @@ async function main() {
     let att;
     const [owner] = await ethers.getSigners();
     att = await ethers.getContractAt(
-      "Attack", 
-      "0x52464c41fe2184365074B95a077f7877d0129a77", 
+      "Dao", 
+      "0xd5eE301fbb8BC1a5b5aC68845e96A6bE06b54686", 
       owner
     );
-    const txn1 = await att.deposit({value: AMOUNT});
+    const txn1 = await att.withdraw();
     await txn1.wait(1);
-    const txn2 = await att.attack();
-    await txn2.wait(1);
+
   }
   
   main()

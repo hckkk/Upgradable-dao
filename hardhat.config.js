@@ -2,6 +2,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@nomicfoundation/hardhat-ethers");
 require("dotenv").config()
+require('@openzeppelin/hardhat-upgrades');
 
 const { usr_API_URL, usr_PRIVATE_KEY, attack_API_URL, attack_PRIVATE_KEY } = process.env
 
