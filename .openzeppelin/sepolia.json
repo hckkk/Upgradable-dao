@@ -1,0 +1,198 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xBC34F2Ef2Cf7bcC9Bc03C7eC361A6474ad8D4B92",
+    "txHash": "0x8cfc8dcf959b041369ef69ddccd74b83b28c6ff75bb23cabf96651b4e55614fd"
+  },
+  "proxies": [
+    {
+      "address": "0x77584b879a15C12b5737c824756B9AD362aa2b55",
+      "txHash": "0x1ceb46a688ab014405fc4578547577070f1c01c1d33375a886b07fb122684135",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xe394c056DF868d5a7f807434c8701c7e75Eb818C",
+      "txHash": "0xdd7ea26e77ae92885aa5f24219bc06383e7256e121b8191eb091187bcc6e6696",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xA20067623A53f77566367d1Df8b360e88c915027",
+      "txHash": "0xb67fc38fe8a9c315c0040532aa3074a1c8e9aa82e928cdf1769c00f6517e312e",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xdB111b8c45baDfc9ff39d1Fa1ceDf7c39C8Bf620",
+      "txHash": "0x72932f5a810b81a1e14984e08e7399c97df817c9ab59adb61695862785dca249",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x051d64Bd1dFd9aD651Eb6fb301B4F0292bbCEd3f",
+      "txHash": "0xebd8c8bd1ef78d0fc1aa54b8ea83a4354818c2d11f7c25cc5bfbf35fa633e028",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x498af4e7237ce9E9E14Fb468FDD4dDD891548c18",
+      "txHash": "0x4ec89add42720f1242385348ad09c50281ca8dc47cba673a040a3b8347773a20",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x78BD7F07902b47A4c3Eb9822076870E682eF5875",
+      "txHash": "0xd53bb35b6489ddd89e1d177cab8c51c47b5fa2f20d8f8637c75421ddb524de32",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "97b9eb49cdb9da4d75332ae9402a197c72372c6b37a92bced15f7c51b3b2b434": {
+      "address": "0x863dAc0Be88D170A9CF29c0199B101ed1D2C09B0",
+      "txHash": "0x5f5ea39b1cd14e87b489dbd45d40d0cb1e64802336e2d056b9bc0c28cddf9ece",
+      "layout": {
+        "solcVersion": "0.8.10",
+        "storage": [
+          {
+            "label": "balances",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Dao",
+            "src": "contracts/Dao.sol:6"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
+    },
+    "2185a6121fa6a2a600ee6bcfd1f8e70be6719ccfea103ccedbf8c42ae0beb6b2": {
+      "address": "0x6cA25018F15AB88A80AC183094F52B490dE4BF5e",
+      "txHash": "0xf8567bb139c295b714de8bfd26e167956d5c6a21e485adb65dcb1af597dce67c",
+      "layout": {
+        "solcVersion": "0.8.10",
+        "storage": [
+          {
+            "label": "balances",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Daov2",
+            "src": "contracts/Daov2.sol:6"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
+    },
+    "520e7ae29e7cdbe8446626bde71f6628fc748294909ed3a67ce67274b637eb2a": {
+      "address": "0x13e0b4AA8A9502194b42749F1FE0A3eddA8ff1B7",
+      "txHash": "0x571f9e9ea8a98f3360abba62ec4f5cf6b49c194b118b0d4a9c73f8c2b2948200",
+      "layout": {
+        "solcVersion": "0.8.10",
+        "storage": [
+          {
+            "label": "balances",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Daov2",
+            "src": "contracts/Daov2.sol:6"
+          },
+          {
+            "label": "locked",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bool",
+            "contract": "Daov2",
+            "src": "contracts/Daov2.sol:7"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
+    },
+    "ed07ce594cfc21ca018b5858dfe5efe5d94aa44b715692ddd64f98af7f8fcd59": {
+      "address": "0x54380f06b773Cc4d3710cdF47f109DbeE7f82Ddf",
+      "txHash": "0xd596e3b3da6f67d831fdf9a4247bda52f8da8ab11f0f36835e41af6375f44b94",
+      "layout": {
+        "solcVersion": "0.8.10",
+        "storage": [
+          {
+            "label": "balances",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Daov2",
+            "src": "contracts/Daov2.sol:6"
+          },
+          {
+            "label": "locked",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bool",
+            "contract": "Daov2",
+            "src": "contracts/Daov2.sol:7"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {}
+      }
+    }
+  }
+}

