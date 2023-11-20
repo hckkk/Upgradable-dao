@@ -1,16 +1,20 @@
 async function main() {
-    const [deployer] = await ethers.getSigners();
-    console.log("Deploying contracts with the account:", deployer.address);
+    let time = Date.now();
+
+    const [owner] = await ethers.getSigners();
+    let dao, daoAddress;
+    console.log("Deploying Dao contracts with the account:", owner.address);
   
     const Dao = await ethers.getContractFactory("Dao");
-    const dao = await Dao.deploy();   
-  
-    console.log("DAO address:", await dao.getAddress());
-  }
-  
-  main()
+    dao = await Dao.deploy();
+    daoAddress = await dao.getAddress();
+    console.log("DAO address:", daoAddress);
+    console.log("Time taken:", Date.now() - time);
+}
+    
+main()
     .then(() => process.exit(0))
     .catch((error) => {
-      console.error(error);
-      process.exit(1);
+    console.error(error);
+    process.exit(1);
     });

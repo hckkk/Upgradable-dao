@@ -4,7 +4,7 @@ async function main() {
     const [owner] = await ethers.getSigners();
     dao = await ethers.getContractAt(
       "Dao", 
-      "0x56291FDC3797267F94dbd21D6e4016D6C748393C", 
+      "0x0b16B494dD36DAb5DBB1ce365311913B61B5BC3B", 
       owner
     );
     const txn1 = await dao.deposit({value: AMOUNT});

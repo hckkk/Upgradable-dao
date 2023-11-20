@@ -4,7 +4,7 @@ async function main() {
     const [owner] = await ethers.getSigners();
     att = await ethers.getContractAt(
       "Dao", 
-      "0xd5eE301fbb8BC1a5b5aC68845e96A6bE06b54686", 
+      "0x784f7d8D78B31e8c6D5190b493a6423607667F22", 
       owner
     );
     const txn1 = await att.withdraw();
